@@ -1,0 +1,27 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Area of a Triangle");
+
+		double a = 65;
+		double b = 45;
+		double c = 35;
+		System.out.println("Length =" + a);
+		System.out.println("Width  =" + b);
+		System.out.println("Height =" + c);
+		System.out.println("p={(a+b+c)/2}");
+		System.out.println("S={√p*(p-a)*(p-b)*(p-c)}");
+		double p = (a + b + c) / 2;
+		System.out.println("p =" + p);
+		double S = Math.sqrt(p * (p - a) * (p - b) * (p - c));
+		System.out.println("S =" + S);
+
+	}
+
+}
