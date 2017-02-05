@@ -1,0 +1,26 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Faktorial (4<n<16)");
+
+		System.out.print("Input n: (4<n<16)");
+		int x = sc.nextInt();
+		int i;
+		int fact = 1;
+		if (x > 4 && x < 16) {
+			for (i = 1; i <= x; i++) {
+				fact = fact * i; // 5!=5*4*3*2*1=120
+
+				System.out.println("Faktorial = " + fact);
+
+			}
+
+		}
+	}
+}
