@@ -1,0 +1,28 @@
+package com.gmail.zak3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Print this array on the screen");
+		System.out.println("Input amount of numbers:"); 
+		int a;
+		int b;
+		int y;
+		a = sc.nextInt(); 
+		int[] massive = new int[a];
+		for (y = 0; y < massive.length; y++) {
+			System.out.println("Input number");
+			b = sc.nextInt(); 
+			massive[y] = b;
+		}
+		System.out.print("Inserted massive elements:");
+		System.out.println();
+		System.out.print("result is: " + Arrays.toString(massive));
+	}
+
+}
