@@ -1,0 +1,33 @@
+package com.gmail.zak3;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Is a four-digit Number of lucky Ticket.");
+		int x;
+		int y;
+		System.out.println("Input the four-digit Number");
+		x = sc.nextInt();
+		int a = x / 1000;
+		int b = x % 1000 / 100;
+		int c = x % 1000 % 100 / 10;
+		int d = x % 1000 % 100 % 10;
+		
+		x = (a + b);
+		y = (c + d);
+		if (x == y) {
+			System.out.println("lucky Ticket");
+		} else {
+			if (x > y) {
+				System.out.println("unlucky Ticket");
+			} else {
+				if (x < y);
+				System.out.println("unlucky Ticket");
+
+			}
+
+		}
+	}
+}
