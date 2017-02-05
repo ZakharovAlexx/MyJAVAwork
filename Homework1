@@ -1,0 +1,48 @@
+package com.gmail.zak3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+	private static String Sum = null;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input an integer, a real number, and a string.");
+		System.out.println("***************************");
+		int integer = 0;
+		double value = 0;
+		String text = "";
+		String result;
+		System.out.println("Input a phrase and press ENTER:");// ввести фразу
+		text = sc.nextLine();
+
+		System.out.println("Input an integer and then press ENTER:");// не
+																		// содержащее
+																		// дробь,Целые:
+																		// 2, 4,
+																		// 8
+		integer = sc.nextInt();
+		System.out.println("Input real number and press ENTER: ");// для
+																	// измерения
+																	// непрерывных
+																	// величин.имеют
+																	// дробную
+																	// часть
+																	// 3.45,
+																	// 2.0, 3.14
+		value = sc.nextDouble();
+		result = concaten(integer, value, text);{
+				}
+		System.out.println("Result :  " + result);
+	}
+
+	static String concaten(int integer, double value, String text) {
+		String result;
+		double sum;
+		sum = integer + value;
+		result = text + "  ,  " + sum;
+		return result;
+	}
+}
