@@ -1,0 +1,43 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		System.out.println("definition of leap year");
+		int year;
+		int normalYear;
+		int leapYear;
+		System.out.println("Input Year");
+		year = sc.nextInt();
+
+		int n = year; // вводимый год-input year
+		int y = 365; // обычный год-year
+		int x = 366; // високосный год
+
+		if (n % 4 == 0) {
+			x = 366;
+			System.out.println("leap Year, days=" + x);
+			n = sc.nextInt();
+		} else {
+			y = 365;
+			System.out.println("norma Year, days=" + y);
+			n = sc.nextInt();
+
+			if (n % 400 == 0) {
+				x = 366;
+				System.out.println("leap Year, days=" + x);
+				n = sc.nextInt();
+			} else {
+				if (n % 100 == 0) {
+					x = 366;
+					System.out.println("leap Year, days=" + x);
+					n = sc.nextInt();
+				}
+			}
+		}
+	}
+}
