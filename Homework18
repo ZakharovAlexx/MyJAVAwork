@@ -1,0 +1,23 @@
+package com.gmail.zak3;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		System.out.println("Input numbers 54698 and press Enter");
+		int j = sc.nextInt();
+        int a= j / 10000;
+		int b= j % 10000 / 1000;
+		int c= j % 10000 % 1000 / 100;
+		int d= j % 10000 % 1000 % 100 / 10;
+		int e= j % 10000 % 1000 % 100 % 10 / 1;
+	    System.out.println(a);
+	    System.out.println(b);
+	    System.out.println(c);
+	    System.out.println(d);
+	    System.out.println(e);
+		  
+	}
+
+}
