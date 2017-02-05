@@ -1,0 +1,31 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		System.out.println("Whether this is a Point inside the Circle or not");
+		double x;
+		double y;
+		double r = 4;
+		double w; // расстояние до точки
+
+		System.out.println("enter a coordinate point");
+		System.out.println("Input the Number");
+		x = sc.nextDouble();
+		System.out.println("Input the Number");
+		y = sc.nextDouble();
+		System.out.println("Radius = 4");
+		w = Math.sqrt(x * x + y * y);
+		if (w > r) {
+			System.out.println("Point is outside Circle");
+		} else {
+			System.out.println("Point within a Circle");
+			
+		}
+
+	}
+}
