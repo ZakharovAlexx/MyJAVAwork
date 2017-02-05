@@ -15,23 +15,14 @@ public class Main {
 		double value = 0;
 		String text = "";
 		String result;
-		System.out.println("Input a phrase and press ENTER:");// ввести фразу
+		System.out.println("Input a phrase and press ENTER:");
 		text = sc.nextLine();
 
-		System.out.println("Input an integer and then press ENTER:");// не
-																		// содержащее
-																		// дробь,Целые:
-																		// 2, 4,
-																		// 8
+		System.out.println("Input an integer and then press ENTER:");
+																		
 		integer = sc.nextInt();
-		System.out.println("Input real number and press ENTER: ");// для
-																	// измерения
-																	// непрерывных
-																	// величин.имеют
-																	// дробную
-																	// часть
-																	// 3.45,
-																	// 2.0, 3.14
+		System.out.println("Input real number and press ENTER: ");
+																	
 		value = sc.nextDouble();
 		result = concaten(integer, value, text);{
 				}
