@@ -1,0 +1,23 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("multiplication table 5-10");
+		int n = 5;
+		int a;
+		int b;
+		for (a = 1; a <= 50; a += 1) {
+			b = n * a;
+			if (a == 11){
+			break;
+			}
+			System.out.println(n + "*" + a + "=" + b);
+		}
+
+	}
+}
