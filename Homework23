@@ -1,0 +1,45 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("determine the staircase, floor apartment");
+		int a = 4;
+		int b = 9;
+		int c = 4;
+		int d;
+		int j;
+		int n;
+		int y;
+		int z;
+		int w;
+
+		System.out.println("apartfloor=" + a);
+		System.out.println("allfloor=" + b);
+		System.out.println("frontdoor=" + c);
+		System.out.println("Input number of flat");
+
+		n = sc.nextInt();
+		if (n >= 145) {
+			System.out.println("this apartment does not exist");
+			n = sc.nextInt();
+		}
+		if (n <= 0) {
+			System.out.println("this apartment does not exist");
+
+		} else {
+			y = ((n / a) + 1);
+			z = ((y / b) + 1);
+			System.out.println("your frontdoor=" + z);
+			d = (b * c);
+			j = (y * b);
+			w = (j / d);
+			System.out.println("your floor=" + w);
+
+		}
+	}
+}
