@@ -1,0 +1,35 @@
+package com.gmail.zak3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enlarge array half and double the second part of the elements");
+		System.out.println("Input 15 numbers:");
+		int y;
+		int b;
+		int[] massive = new int[15]; 
+		for (y = 0; y < 15; y++) {
+			System.out.println("Input number");
+			b = sc.nextInt(15); 
+							
+			massive[y] = b;
+		}
+		int[] w = Arrays.copyOf(massive, 30); 
+											
+		System.arraycopy(massive, 0, w, 15, massive.length); 
+																
+		for (y = 0; y < w.length; y++) {
+			if (y < 15) {
+			} else {
+				w[y] *= 2;
+			}
+		}
+		System.out.print(Arrays.toString(w));
+	}
+
+}
