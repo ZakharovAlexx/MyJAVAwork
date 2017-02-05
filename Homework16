@@ -1,0 +1,38 @@
+package com.gmail.zak3;
+import java.util.Arrays;
+import java.util.Scanner;
+public class Main {
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("the maximum/minimum number of the array of integers.");
+		System.out.println("Input numbers:");// Читаем с клавиатуры размер массива
+		int y;
+		int b;
+		int d;
+		int[] massive = new int[10]; // Создаём массив int
+		for (y = 0; y < 10; y++) {
+			System.out.println("Input number:");
+			b = sc.nextInt(); // Заполняем массив элементами, введёнными с клавиатуры
+			massive[y] = b; 
+		}
+		System.out.print("Inserted massive elements:");
+		System.out.println();
+		System.out.print("result is: " + Arrays.toString(massive)+".");
+		System.out.println();{
+			int[] myArray1 = massive;
+			//int[] myArray1 = { 2, 72, 758, 54, 987, 6, 3 };если потребуется с уже введённого
+			int min = myArray1 [0];
+			
+			int max = min;
+			for (int i = 1; i < myArray1.length; ++i) {
+			   if (myArray1[i] > max) max = myArray1[i];
+			   if (myArray1[i] < min) min = myArray1[i];
+			}
+			System.out.println("MAX VALUE = " +max+ ".");
+			System.out.println("MIN VALUE = " +min+ ".");
+		}
+	}
+
+}
