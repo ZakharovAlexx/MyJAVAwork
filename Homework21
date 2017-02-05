@@ -1,0 +1,37 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		System.out.println("Write the 4 Numbers and press enter");
+		System.out.println("Selection of the maximum Number");
+		int a;
+		int b;
+		int c;
+		int d;
+		int max;
+		System.out.println("Input the number");
+		a = sc.nextInt();
+		System.out.println("Input the number");
+		b = sc.nextInt();
+		System.out.println("Input the number");
+		c = sc.nextInt();
+		System.out.println("Input the number");
+		d = sc.nextInt();
+		max = a;
+		if (max < b) {
+			max = b;
+		}
+		if (max < c) {
+			max = c;
+		}
+		if (max < d) {
+			max = d;
+		}
+		System.out.println("the maximum number=" + max);
+	}
+}
