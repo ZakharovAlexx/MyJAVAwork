@@ -1,0 +1,37 @@
+package com.gmail.zak3;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("using the keyboard, used to count the number of line");
+		System.out.println("Input a bid:");
+		// When the snow begins (bbb)to melt 4 and streamlets (bb)can be seen
+		int theNumberOfLettersD = 0;
+		int theNumberOfLettersB = 0;
+		int theNumberOfLettersA = 0;
+		int i;
+
+		String textstring = sc.nextLine();
+		for (i = 0; i < textstring.length(); i++) {
+
+			if (textstring.charAt(i) == 'a')
+				theNumberOfLettersA++;
+			if (textstring.charAt(i) == 'b')
+				theNumberOfLettersB++;
+			if (textstring.charAt(i) == '4')
+				theNumberOfLettersD++;
+		}
+
+		System.out.println("The number of letters a=" + theNumberOfLettersA);
+
+		System.out.println("The number of letters b=" + theNumberOfLettersB);
+
+		System.out.println("The number of letters 4=" + theNumberOfLettersD);
+
+	}
+}
