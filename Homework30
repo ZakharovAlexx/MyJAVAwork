@@ -1,0 +1,16 @@
+package com.gmail.zak2;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		double price = 25.7;
+		System.out.println("Input weight and press Enter");
+		double weight = sc.nextDouble();
+		double totalSum = price*weight;
+		System.out.println("Total sum = "+totalSum);
+		sc.close();
+			}
+
+		}
