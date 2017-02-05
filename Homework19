@@ -1,0 +1,25 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		// TODO Auto-generated method stub
+		System.out.println("Input numbers 54698 and press Enter");
+		int j = sc.nextInt();
+		int a = 5;
+		int b = 4;
+		int c = 6;
+		int d = 9;
+		int e = 8;
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+		System.out.println(d);
+		System.out.println(e);
+
+	}
+
+}
