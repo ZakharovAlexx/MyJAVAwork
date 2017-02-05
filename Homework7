@@ -1,0 +1,37 @@
+package com.gmail.zask3;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("quantity and sum odd and even numbers {0,5,2,4,7,1,3,19}");
+		System.out.println("*************************");
+		int[] y = { 0, 5, 2, 4, 7, 1, 3, 19 };
+		int c;
+		int quantevenSum = 0;
+		int quantoddSum = 0;
+		int evenSum = 0;
+		int oddSum = 0;
+		for (c = 0; c < y.length; c++) {
+			if (y[c] % 2 - 1 == 0) {
+				quantoddSum++;
+				oddSum = oddSum + y[c];
+			}
+		}
+		System.out.println("quantity odd numbers=" + quantoddSum);
+		System.out.println();
+		System.out.println("Sum odd numbers=" + oddSum);
+		System.out.println("*************************");
+		for (c = 1; c < y.length; c++) {
+			if (y[c] % 2 == 0) {
+				quantevenSum++;
+				evenSum = evenSum + y[c];
+			}
+		}
+		System.out.println("quantity even numbers=" + quantevenSum);
+		System.out.println();
+		System.out.println("Sum even numbers=" + evenSum);
+	}
+}
