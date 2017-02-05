@@ -1,0 +1,15 @@
+package com.gmail.zak3;
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("circumferential Length, if the Radius is read from the Keyboard");
+		System.out.println("c = 2*π*r");
+        double r = sc.nextDouble() * 2;
+        double c = Math.PI * r;
+        System.out.println("c ="+c);
+	}
+
+}
