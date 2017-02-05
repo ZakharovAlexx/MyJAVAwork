@@ -1,0 +1,29 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("whether the six-digit number palindrome");
+		int x;
+		System.out.println("Input the six-digit number");
+		x = sc.nextInt();
+		int a = x / 100000;
+		int b = x % 100000 / 10000;
+		int c = x % 100000 % 10000 / 1000;
+		int d = x % 100000 % 10000 % 1000 / 100;
+		int e = x % 100000 % 10000 % 1000 % 100 / 10;
+		int f = x % 100000 % 10000 % 1000 % 100 % 10;
+
+		if (a == f & b == e & c == d) {
+			System.out.println("number is palindrome");
+		} else {
+			System.out.println("number is not palindrome");
+
+		}
+
+	}
+}
