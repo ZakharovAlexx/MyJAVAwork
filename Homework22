@@ -1,0 +1,70 @@
+package com.gmail.zak3;
+
+import java.util.Scanner;
+
+public class Main {
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Selection of the maximum Number");
+		int a;
+		int b;
+		int c;
+		int d;
+		int max;
+		System.out.println("Input the number");
+		a = sc.nextInt();
+		System.out.println("Input the number");
+		b = sc.nextInt();
+		System.out.println("Input the number");
+		c = sc.nextInt();
+		System.out.println("Input the number");
+		d = sc.nextInt();
+		if (a > b) {
+			max = a;
+			System.out.println("Max a =" + a);
+		} else {
+			max = b;
+			System.out.println("Max b =" + b);
+			if (c > d) {
+				max = c;
+				System.out.println("Max c =" + c);
+			} else {
+				max = d;
+				System.out.println("Max d =" + d);
+				if (a > d) {
+					max = a;
+					System.out.println("Max a =" + a);
+				} else {
+					max = d;
+					System.out.println("Max d =" + d);
+					if (b > c) {
+						max = b;
+						System.out.println("Max b =" + b);
+					} else {
+						max = c;
+						System.out.println("Max c =" + c);
+						if (a > c) {
+							max = a;
+							System.out.println("Max a =" + a);
+						} else {
+							max = c;
+							System.out.println("Max c =" + c);
+							if (b > d) {
+								max = b;
+								System.out.println("Max b =" + b);
+							} else {
+								max = d;
+								System.out.println("Max d =" + d);
+							}
+							System.out.println("the maximum number=" + max);
+						}
+					}
+					}
+			
+			}
+		}
+	}
+
+}
