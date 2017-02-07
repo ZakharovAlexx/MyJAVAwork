@@ -1,0 +1,54 @@
+package com.gmail.zak3;
+
+import java.util.Arrays;
+import java.util.Date;
+import java.util.Scanner;
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Formatter;
+import java.io.File;
+import java.io.IOException;
+import java.io.FileNotFoundException;
+import java.io.PrintWriter;
+
+public class Main {
+
+	private static Date prevDate;
+	private static String dateText2;
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("the number of milliseconds elapsed since the same number, but in the past month");
+
+		Scanner sc1 = new Scanner(System.in);
+		Date date = new Date();
+		SimpleDateFormat burda = new SimpleDateFormat("dd:MM:yyyy");
+		String dateText = "";
+		System.out.println("Input currentDate :");
+		dateText = sc1.nextLine();
+		System.out.println("*********************" + dateText);
+
+		Calendar calendCurrent = Calendar.getInstance();
+		int day = calendCurrent.get(Calendar.DAY_OF_MONTH);
+		int month = calendCurrent.get(Calendar.MONTH);
+		int year = calendCurrent.get(Calendar.YEAR);
+
+		Calendar calendCurrent2 = Calendar.getInstance();
+		System.out.println("Input previosDate :");
+		dateText2 = sc1.nextLine();
+		int n = 1;
+		System.out.println("*********************" + dateText2);
+		calendCurrent.set(year, month - n, day);
+		long previosDate = calendCurrent.getTimeInMillis();
+		long currentDate = date.getTime();
+		long Total = currentDate - previosDate;
+		System.out.println("Total : " + Total);
+	}
+
+}
