@@ -1,0 +1,34 @@
+/**
+ * Created by Алекс on 21.03.2017.
+ */
+import org.junit.Test;
+import static junit.framework.Assert.assertEquals;
+@SuppressWarnings("ALL")
+public class Checking {
+    // Checking the summation of two Numbers, version 1
+    public class Calculate {
+        @Test
+        public void SumVersion1() {
+            int o = 2;
+            int p;
+            int r;
+            for (p = 1; p <= 6; p += 1) {
+                r = o + p;
+                if (r == 7) {
+                }
+                class testCalculate {
+                    public int getSum(int a, int b) {
+                      return a+b;
+                }
+                }
+                class TestCalc {  
+                    @Test
+                    public void getSumTest() {
+                        testCalculate c = new testCalculate(); 
+                        assertEquals(c.getSum(20, 30), 50);
+                    }
+                }
+            }
+        }
+    }
+}
