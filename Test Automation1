@@ -1,0 +1,33 @@
+
+/**
+ * Created by Алекс on 21.03.2017.
+ */
+import org.junit.Test;
+import java.util.Scanner;
+@SuppressWarnings("ALL")
+public class JunitTest {
+    class Checking {
+        // TODO Auto-generated method stub
+        public void main(String[] args) {
+            final Scanner sc = new Scanner(System.in);
+            System.out.println("sum of numbers");
+            System.out.print("Input n numbers And press enter");//ввести число и нажать enter
+            class Calculate {
+                @Test
+                public void testAddition() {
+            int n;
+            int a;
+            int b;
+            n = sc.nextInt();
+            for (a = 1; a <= 20; a += 1) {
+                             b = n + a;
+                        System.out.println(n + "+" + a + "=" + b);
+                    }
+
+                }
+
+            }
+
+        }
+    }
+}
