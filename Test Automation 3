@@ -1,0 +1,48 @@
+/**
+ * Created by Алекс on 22.03.2017.
+ */
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import java.util.concurrent.TimeUnit;
+import org.junit.After;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.*;
+                                         //Site Rosetka, Household products
+
+public class JunitTest {
+    WebDriver driver;
+    @Before
+    public void setupTest() {
+        System.setProperty("webdriver.chrome.driver", "F:\\drivers\\chromedriver.exe");
+        driver = new ChromeDriver();
+        driver.manage().window().maximize();
+        WebDriver.Timeouts timeouts = driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+    }
+        @Test
+    public void RosetkaTest() {
+        driver.get("http://rozetka.com.ua/");
+        WebElement HouseholdProducts = driver.findElement(By.id("('5300') a href=\"http://rozetka.com.ua/tovary-dlya-doma/c2394287/"));
+            HouseholdProducts.click();
+        System.out.println("Open page is:"+ HouseholdProducts.getPage());
+
+            WebElement KaminyPechiSauny = driver.findElement(By.id("a class=\"pab-h3-link\" href=\"http://rozetka.com.ua/kaminy-pechi-sauny/c152463/\" onclick=\"document.fireEvent('openCategoryPortal', {extend_event: [{name: 'eventContext', value: 'Камины, печи, сауны'}, {name: 'eventContent', value: ''}, {name: 'eventLocation', value: ''}]});\">\n" + "Камины, печи, сауны\n"));
+            KaminyPechiSauny.click();
+            System.out.println("Open page is: "+ KaminyPechiSauny.getPage));
+
+            WebElement AksessuaryDlyaKaminov = driver.findElement(By.id("a class=\"sprite-side pab-items-i-link\" href=\"http://rozetka.com.ua/aksessuary-dlya-kaminov/c157123/\" onclick=\"document.fireEvent('openCategoryPortal', {extend_event: [{name: 'eventContext', value: 'Аксессуары для каминов'}, {name: 'eventContent', value: ''}, {name: 'eventLocation', value: 'Камины, печи, сауны'}]});\">\n" + "Аксессуары для каминов\n"));
+            AksessuaryDlyaKaminov.click();
+            System.out.println("Open page is: "+ AksessuaryDlyaKaminov.getPage));
+            assertNotNull("Open page is not null " + AksessuaryDlyaKaminov.getPage);
+    }
+    @After
+    public void Finish() {
+        driver.quit();
+
+    }
+}
